@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Administracion de inventario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Pico-->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--JS-->
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/index.js"></script>
+    <!--Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Administrador de inventario</h1>
+        <a href="#" class="primary" id="btnNuevo" role="button" title="Agregar Curso">Nuevo Producto</a>
+        <a href="#" class="secondary" id="btnEliminar" role="button" title="Eliminar Curso">Eliminar Producto</a>
+        <div>
+            <h5>Doble click en el ID del correspondiente para modificar</h3>
+        </div>
+        <table class="tabla-items">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+                    <th>Categoria</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div id="cargando">
+            <a href="#" aria-busy="true">Cargando, por favor espere...</a>
+        </div>
+        <dialog class="fondo-blanco">
+            <div class="grid">
+                <article>
+                    <header>
+                        <a class="close" onclick="closeModal()"></a>
+                        Modifique los datos del Producto y pulse el botón Confirmar
+                    </header>
+                        <form>
+                        <label for="id">
+                            ID
+                            <input type="number" id="id" placeholder="ID" disabled>
+                        </label>
+                        <label for="nombre">
+                            Nombre
+                            <input type="text" id="nombre" placeholder="Producto">
+                        </label>
+                        <label for="precio">
+                            Precio
+                            <input type="number" id="precio" placeholder="Precio">
+                        </label>
+                        <label for="descripcion">
+                            Descripción
+                            <input type="text" id="descripcion" placeholder="Descripcion">
+                        </label>
+                        <label for="categoria">
+                            Categoria
+                            <input type="text" id="categoria" placeholder="Categoria">
+                        </label>
+                        <label for="stock">
+                            Stock
+                            <input type="number" id="stock" placeholder="Stock">
+                        </label>    
+                    </form>
+                    <footer>
+                        <a href="#" class="outline ocultar-boton" id="btnModificar" role="button">Modificar</a>
+                        <a href="#" class="outline ocultar-boton" id="btnAgregar" role="button">Agregar</a>
+                    </footer>
+                </article>    
+            </div>
+        </dialog>
+      </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.fondo-blanco {
+    background: url(/img/bg/Meteor.svg);
+}
+
+body {
+    background: url(/img/bg/Meteor.svg);
+}
+
+.tabla-items {
+    margin-top: 50px;
+}
+
+
+.ocultar-boton {
+    display: none;
+}
+
+.cell-colored {
+    background-color: slategray;
+    text-align: right;
+}
